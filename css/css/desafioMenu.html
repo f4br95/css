@@ -7,7 +7,106 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        body{
+            background-color: #D3D3D3;            
+            margin: 0px;
+
+        }
+
+
+            
+        
+
+        .cabecalho{
+            background-color: rgb(41, 39, 39);
+            margin: 0px;
+            padding: 0px;            
+            position:relative;
+            height: 70px;
+            border-bottom: solid 5px aqua;
+
+        }
+        li{
+            display: inline;
+            padding: 10px;
+            
+        }
+        .menu a:hover, .menu a.selected{
+            background-color: aqua;
+            color: black;
+        }
+
+        a{
+            font-family: Oswald;
+            text-decoration: none;            
+            color: white
+            
+        }
+
+        .logo{
+            position: relative;
+            height: 40px;
+            display: inline-block;
+            padding: 15px; 
+        }
+        .logo img{
+            
+            height: 100%;
+            
+        }
+
+        .menu{
+            position: absolute;
+            top: 5px;
+            left: 300px;
+            
+        }
+        .autenticacao{
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            
+        }
+
+
+
+        .botao{
+            font-size: 16px;
+            
+            text-decoration: none;            
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin: 10px;
+            
+           
+        }
+        .destaque{
+            background-color: #f50a31;
+            color: #fff; 
+
+            
+         }
+         .menu-toggle{
+            float:right;
+            color: #eee;
+            background-color: #555;
+            border: solid 1px #777;
+            border-radius: 5px;
+            height: 40px;
+            padding: 10px 20px;
+            margin: 20px 15px;
+            
+            
+         }
+
+            
+         @media(max-width: 600px){
+            .autenticacao, li{display:none;}
+         }
+         @media(min-width: 600px){
+            .fa, .fa-lg, .fa-bars, .menu-toggle{display: none;}
+        }
+       
     </style>
 </head>
 
@@ -44,7 +143,14 @@
     </header>
 
     <script>
-        // ...
+        window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newMenu = document.querySelector(`.menu a[href='#${newURL}']`)
+            oldMenu && oldMenu.classList.remove('selected')
+            newMenu && newMenu.classList.add('selected')
+        }
     </script>
 </body>
 

@@ -16,17 +16,46 @@
             flex-direction: column;
             align-items: center;
         }
+
+        p{
+            font-size: 1em;
+            font-size: 100%;
+            font-size:16px;
+            font-size:12pt;
+
+            font-size: 100px;
+
+        }
+
+        .botao{
+            font-size: 28px;
+            
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+        .destaque{
+            background-color: tomato;
+            color: #fff;
+            box-shadow: 2px 2px 1px 1px #000;
+         }
+
+         .destaque:active{
+            box-shadow: none;
+         }
+
+
     </style>
 </head>
 
 <body>
-    <div>
+    <div id="div">
         <p>
             Que texto
             <br>legal!!!
         </p>
     </div>
-    <a href="http://google.com" class="botao destaque">Google</a>
+    <a href="#div" class="botao destaque">Google</a>
 </body>
 
 </html>
