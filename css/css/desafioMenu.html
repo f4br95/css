@@ -8,8 +8,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
         body{
-            background-color: #D3D3D3;            
-            margin: 0px;
+            margin: 0;
+            font-family: 'Oswald', sans-serif;
+            background-color: lightgray;
 
         }
 
@@ -22,7 +23,7 @@
             margin: 0px;
             padding: 0px;            
             position:relative;
-            height: 70px;
+            height: 80px;
             border-bottom: solid 5px aqua;
 
         }
@@ -30,20 +31,22 @@
             display: inline;
             padding: 10px;
             
+            
         }
         .menu a:hover, .menu a.selected{
             background-color: aqua;
             color: black;
+            height: 60px;
         }
 
-        a{
-            font-family: Oswald;
-            text-decoration: none;            
-            color: white
-            
+        .cabecalho a {
+            text-decoration: none;
+            color: #eee;
+            font-size: 1.3em;
+            padding: 10px 15px;
         }
 
-        .logo{
+        .cabecalho .logo{
             position: relative;
             height: 40px;
             display: inline-block;
@@ -55,10 +58,12 @@
             
         }
 
-        .menu{
+        .cabecalho .menu{
             position: absolute;
             top: 5px;
             left: 300px;
+           
+            
             
         }
         .autenticacao{
@@ -70,9 +75,8 @@
 
 
 
-        .botao{
-            font-size: 16px;
-            
+        .cabecalho .botao{
+            font-size: 16px;            
             text-decoration: none;            
             border-radius: 30px;
             padding: 10px 25px;
@@ -80,7 +84,7 @@
             
            
         }
-        .destaque{
+        .cabecalho .destaque{
             background-color: #f50a31;
             color: #fff; 
 
